@@ -30,14 +30,14 @@ To implement the Otp reader in the application:-
 OtpReader.bind(this,"SENDER_NUM_HERE");
 ```
 
-3. Override the otpReceived method
+Override the otpReceived method
 ```
   @Override
     public void otpReceived(String smsText) {
         //Do whatever you want to do with the text
-        Toast.makeText(this,"Got "+otp,Toast.LENGTH_LONG).show();
-        Log.d("Otp",otp);
+        Toast.makeText(this,"Got "+smsText,Toast.LENGTH_LONG).show();
+        Log.d("Otp",smsText);
     }
 ```
 
-4. Thats it. otpReceived will be called when the message is received.
+#### Thats it. otpReceived will be called when the message is received.
