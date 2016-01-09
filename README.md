@@ -24,7 +24,7 @@ compile 'swarajsaaj:otpreader:1.0'
 To implement the Otp reader in the application:-
 
 1. Implement the OTPListener Interface in your activity
-2. Bind the current Activity (or OTPListener) to OtpReader with second argument as the sender number (e.g. if it might be like BM-BIZY, DM-BIZY or some constant like 9898982222 , enter any extract substring of the expected number here or leave it blank to read all incoming messages. If not left blank the numbers containing the string will be considered for listening).
+2. Bind the current Activity (or OTPListener) to OtpReader with second argument as the sender number (e.g. if it might be like BM-BIZY, DM-BIZY you can give this argument as "BIZY" or some constant like 9898982222 , enter any extract substring of the expected number here or leave it blank to read all incoming messages. If not left blank the numbers containing the string will be considered for listening).
 
 ```
 OtpReader.bind(this,"SENDER_NUM_HERE");
