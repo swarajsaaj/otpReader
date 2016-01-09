@@ -4,16 +4,6 @@ OTP (One-Time Password)  Reader Library for Android helping easily implement lis
 
 ### Gradle Dependencies
 
-> build.gradle (Project wide)
-```
-allprojects {
-    repositories {
-        jcenter()
-        maven { url "http://dl.bintray.com/swarajsaaj/Contributions" }
-    }
-}
-```
-
 > build.gradle (module)
 ```
 compile 'swarajsaaj:otpreader:1.0'
