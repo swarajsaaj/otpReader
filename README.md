@@ -29,6 +29,7 @@ To implement the Otp reader in the application:-
 ```
 OtpReader.bind(this,"SENDER_NUM_HERE");
 ```
+
 3. Override the otpReceived method
 ```
   @Override
