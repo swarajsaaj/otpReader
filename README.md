@@ -23,8 +23,25 @@ compile 'swarajsaaj:otpreader:1.0'
 
 To implement the Otp reader in the application:-
 
-1. Implement the OTPListener Interface in your activity
-2. Bind the current Activity (or OTPListener) to OtpReader with second argument as the sender number (e.g. if it might be like BM-BIZY, DM-BIZY you can give this argument as "BIZY" or some constant like 9898982222 , enter any extract substring of the expected number here or leave it blank to read all incoming messages. If not left blank the numbers containing the string will be considered for listening).
+1. Implement the following service in AndroidManifest.xml
+
+```
+ <receiver android:name="swarajsaaj.smscodereader.receivers.OtpReader">
+        <intent-filter>
+            <action android:name="android.provider.Telephony.SMS_RECEIVED"/>
+        </intent-filter>
+</receiver>
+```
+
+2. Add SMS reading permissions in AndroidManifes.xml
+```
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+
+```
+
+3. Implement the OTPListener Interface in your activity
+4. Bind the current Activity (or OTPListener) to OtpReader with second argument as the sender number (e.g. if it might be like BM-BIZY, DM-BIZY you can give this argument as "BIZY" or some constant like 9898982222 , enter any extract substring of the expected number here or leave it blank to read all incoming messages. If not left blank the numbers containing the string will be considered for listening).
 
 ```
 OtpReader.bind(this,"SENDER_NUM_HERE");
