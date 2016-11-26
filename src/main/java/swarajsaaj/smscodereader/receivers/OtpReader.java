@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.telephony.SmsMessage;
 import android.util.Log;
+import android.text.TextUtils;
 
 import swarajsaaj.smscodereader.interfaces.OTPListener;
 
@@ -56,7 +57,7 @@ public class OtpReader extends BroadcastReceiver {
                     String message = currentMessage.getDisplayMessageBody();
                     Log.i(TAG, "senderNum: " + senderNum + " message: " + message);
 
-                    if (senderNum.contains(receiverString)) { //If message received is from required number.
+                    if (!TextUtils.isEmpty(receiverString) && senderNum.contains(receiverString)) { //If message received is from required number.
                         //If bound a listener interface, callback the overriden method.
                         if (otpListener != null) {
                             otpListener.otpReceived(message);
