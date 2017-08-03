@@ -66,4 +66,15 @@ public class OtpReader extends BroadcastReceiver {
                 }
             }
     }
+
+    /**
+     * Unbinds the sender string and listener for callback.
+     *
+     * @param listener
+     * @param sender
+     */
+    public static void unbind() {
+        otpListener = null;
+        receiverString = null;
+    }
 }
