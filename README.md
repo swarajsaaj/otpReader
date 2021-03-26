@@ -6,7 +6,7 @@ OTP (One-Time Password)  Reader Library for Android helping easily implement lis
 
 > build.gradle (module)
 ```
-compile 'swarajsaaj:otpreader:1.1'
+implementation 'swarajsaaj:otpreader:1.1'
 ```
 
 ### Usage
