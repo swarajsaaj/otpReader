@@ -8,6 +8,8 @@ import android.telephony.SmsMessage;
 import android.util.Log;
 import android.text.TextUtils;
 
+import java.util.ArrayList;
+
 import swarajsaaj.smscodereader.interfaces.OTPListener;
 
 
@@ -41,6 +43,11 @@ public class OtpReader extends BroadcastReceiver {
     public static void bind(OTPListener listener, String sender) {
         otpListener = listener;
         receiverString = sender;
+    }
+    public static void bindAll(OTPListener listener, ArrayList<String> senders){
+        for (String sender:senders) {
+            bind(listener,sender);
+        }
     }
 
     @Override

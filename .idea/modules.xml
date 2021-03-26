@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/smscodereader.iml" filepath="$PROJECT_DIR$/smscodereader.iml" />
+      <module fileurl="file://$PROJECT_DIR$/otpReader.iml" filepath="$PROJECT_DIR$/otpReader.iml" />
     </modules>
   </component>
 </project>
